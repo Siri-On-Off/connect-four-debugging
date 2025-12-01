@@ -106,24 +106,38 @@ export class Board {
   }
 
   private getDiagonals(r: number, c: number): [string, string] {
-    // Woe to thee, who entered here, for you dug too deep and unearthed daemons of the otherworld!
     const rising: Array<string> = [];
     const falling: Array<string> = [];
-    for (let i = r, j = c; i >= 0 && j < this.fields[0].length; i--, j++) {
+
+   // const ROWS: number = 6; v ^ Zeilen
+   // const COLS: number = 7; -> <- Spalten
+  // const CONNECT_N: number = 4;
+
+    for (
+      let i = r, j = c; 
+      i >= 0 && j < COLS; 
+      i--, j++) {
       rising.push(this.fields[i][j]);
     }
-    for (let i = r, j = c; i < this.fields.length && j >= 0; i++, j--) {
+
+    for (let i = r, j = c; 
+      i < ROWS && j >= 0; 
+      i++, j--) {
       rising.push(this.fields[i][j]);
     }
+
     for (
       let i = r, j = c;
-      i < this.fields.length && j < this.fields[0].length;
+      i < ROWS && j < COLS;
       i++, j++
     ) {
       falling.push(this.fields[i][j]);
     }
-    for (let i = r, j = c; i >= 0 && j >= 0; i--, j--) {
-      falling.push(this.fields[i][i]);
+
+    for (let i = r, j = c; 
+      i >= 0 && j >= 0; 
+      i--, j--) {
+      falling.push(this.fields[i][j]);
     }
     return [rising.join(""), falling.join("")];
   }
