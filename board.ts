@@ -109,10 +109,6 @@ export class Board {
     const rising: Array<string> = [];
     const falling: Array<string> = [];
 
-   // const ROWS: number = 6; v ^ Zeilen
-   // const COLS: number = 7; -> <- Spalten
-  // const CONNECT_N: number = 4;
-
     for (
       let i = r, j = c; 
       i >= 0 && j < COLS; 
