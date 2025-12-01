@@ -66,7 +66,7 @@
     Player x: A winner is you!
     ```
 
-- Diagolaer Gewinn: richtig
+- aufsteigender Diagolaer Gewinn: richtig
     ```
     0 1 2 3 4 5 6
     _ _ _ _ _ _ _
@@ -77,4 +77,17 @@
     x o o x _ _ _
 
     Player x: A winner is you!
+    ```
+
+- fallender Diagolaer Gewinn: falsch
+    ```
+    0 1 2 3 4 5 6
+    _ _ _ _ _ _ _ 
+    _ _ _ _ _ _ _ 
+    o _ _ _ _ _ _ 
+    x o _ _ _ _ _ 
+    o x o _ x _ _ 
+    x o x o x _ _
+
+    Player x: 
     ```
